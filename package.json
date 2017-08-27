@@ -1,0 +1,44 @@
+{
+  "name": "wysiwygy",
+  "version": "0.1.0",
+  "description": "WYSIWYG Plugin for Web",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --env build",
+    "dev": "webpack --progress --colors --watch --env dev",
+    "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
+    "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shobhitsharma/wysiwygy.git"
+  },
+  "keywords": [
+    "wysiwyg",
+    "editor",
+    "wysiwygy",
+    "cms",
+    "plugin",
+    "cms-editor"
+  ],
+  "author": "Shobhit Sharma <ishobhitsharma@gmail.com> (https://shobh.it/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shobhitsharma/wysiwygy/issues"
+  },
+  "homepage": "https://github.com/shobhitsharma/wysiwygy#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.1",
+    "eslint": "^4.5.0",
+    "eslint-loader": "^1.9.0",
+    "mocha": "^3.5.0",
+    "webpack": "^3.5.5",
+    "yargs": "^8.0.2"
+  }
+}
