@@ -4,16 +4,21 @@
  * @type {Object}
  */
 
-'use strict';
+import Core from './core.js';
 
-const Dispatcher = {
+class Dispatcher extends Core {
+
+  constructor() {
+    super(this);
+  }
+
   /**
    * Bind a callback to an event
    *
    * @param {String} eventName
    * @param {Function} function
    */
-  on: function (event, listener) {
+  on(event, listener) {
     if (typeof this.events[event] !== 'object') {
       this.events[event] = [];
     }
@@ -26,7 +31,7 @@ const Dispatcher = {
    * @param {String} eventName
    * @param {Function} function
    */
-  off: function (event, listener) {
+  off(event, listener) {
     let index = null;
 
     if (typeof this.events[event] === 'object') {
@@ -43,7 +48,7 @@ const Dispatcher = {
    * @param {String} eventName
    * @param {Function} function
    */
-  emit: function (event) {
+  emit(event) {
     let i, listeners, length, args = [].slice.call(arguments, 1);
 
     if (typeof this.events[event] === 'object') {
@@ -62,7 +67,7 @@ const Dispatcher = {
    * @param {String} eventName
    * @param {Function} function
    */
-  once: function (event, listener) {
+  once(event, listener) {
     this.on(event, function g() {
       this.off(event, g);
       listener.apply(this, arguments);

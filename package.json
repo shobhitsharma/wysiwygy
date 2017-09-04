@@ -1,13 +1,13 @@
 {
   "name": "wysiwygy",
   "version": "0.1.0",
-  "description": "WYSIWYG Plugin for Web",
-  "main": "index.js",
+  "description": "WYSIWYG Content Editor Plugin for Web",
+  "main": "dist/wysiwygy.min.js",
   "scripts": {
-    "build": "webpack --env build",
-    "dev": "webpack --progress --colors --watch --env dev",
-    "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
-    "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
+    "start": "rollup -c -w",
+    "test": "npm test",
+    "build": "rollup -c",
+    "release": "node bin/release"
   },
   "repository": {
     "type": "git",
@@ -27,18 +27,22 @@
     "url": "https://github.com/shobhitsharma/wysiwygy/issues"
   },
   "homepage": "https://github.com/shobhitsharma/wysiwygy#readme",
+  "files":[
+    "dist"
+  ],
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-es2015": "^6.24.1",
-    "chai": "^4.1.1",
-    "eslint": "^4.5.0",
-    "eslint-loader": "^1.9.0",
+    "chai": "^4.1.2",
+    "karma": "^1.7.1",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sauce-launcher": "^1.2.0",
+    "karma-spec-reporter": "0.0.31",
     "mocha": "^3.5.0",
-    "webpack": "^3.5.5",
-    "yargs": "^8.0.2"
+    "phantomjs-prebuilt": "^2.1.15",
+    "rollup": "^0.49.2",
+    "rollup-plugin-commonjs": "^8.2.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1"
   }
 }

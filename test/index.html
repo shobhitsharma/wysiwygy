@@ -1,0 +1,37 @@
+<body>
+  <div id="test"></div>
+</body>
+<script src="../dist/wysiwygy.min.js"></script>
+<script>
+  window.onload = function () {
+    var editor = new wysiwygy({
+      test: true
+    });
+
+    editor.render(document.getElementById('test'), {
+      style: true,
+      toolbar: [
+        'bold',
+        'italic',
+        'underline',
+        'strike',
+        'format',
+        'fontSize',
+        'fontColor',
+        'fontBackground',
+        'undo',
+        'redo',
+        'reformat',
+        'leftAlign',
+        'rightAlign',
+        'centerAlign',
+        'fullAlign',
+        'numberedList',
+        'link',
+        'unlink',
+        'image',
+        'table'
+      ]
+    });
+  };
+</script>

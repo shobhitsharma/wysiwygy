@@ -29,5 +29,4 @@ node_modules
 # Remove some common IDE working directories
 .idea
 .vscode
-
-dist
+.DS_Store
